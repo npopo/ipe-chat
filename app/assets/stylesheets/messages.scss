@@ -1,3 +1,102 @@
+@import "./color";
+
+.main {
+
+    height: calc(100vh - 80px);  // vhは「viewport height」の略で、viewport の高さ（ブラウザの高さ）に対する指定です。100vhで表示しているスマホやPCのウィンドウサイズの100%という意味になります 
+    .chat {
+        padding: 0 20px;
+        height: calc(100vh - 160px);
+        background-color: $back-color;
+        overflow-y: auto;
+        
+    }
+    
+    .chat-message1{
+        display: flex;
+        border-radius: 10px;
+        background-color: $sub2-color; 
+        margin-bottom: 10px;
+        margin-top :10px;
+        margin-right: 4em;
+        margin-left: 4em;
+        
+        }
+    .chat-message2 {
+
+          .container{
+            line-height:30px;
+            
+
+          
+            background-color: $sub2-color; 
+            
+            padding: .1em;
+            margin-top :10px;
+            margin-left: 20px;
+            
+            .space{
+                margin-left: 10px;
+            }
+        }
+    }
+    
+    .message-edit{
+        display: flex;
+        margin: 0 0 0 auto;
+        
+     ul {
+        
+        
+             
+        
+        li {
+            background-color: $sub-color;
+            border-radius: 5px;
+            margin: 4%;
+        
+            a {
+                padding: .6em 6em;
+                color: $sub2-color;
+                font-weight: bold;
+                text-decoration: none;
+                
+                display: block;
+                
+
+                
+            }
+           
+            &:hover {
+                opacity: 0.7;
+            }
+           }
+        }
+      }
+
+
+    .chat-form {
+        height: 80px;
+        padding: 20px;
+        background-color: $sub-color;
+        input.text { 
+            width: 1300px; 
+            border-radius: 10px;
+            margin-right: 2em; 
+            text-decoration: none;
+            padding: .7em 2em;
+        }
+        input.submit{
+            background-color: $main-color;
+            border-radius: 10px;
+            padding: .7em 2em;    /* 内側余白　.7em 2emは、上下・左右の順に指定 */
+                color: $sub2-color;    /* フォントの色 */
+                font-weight: bold;    /* フォントを太字 */
+                text-decoration: none;    /* アンダーライン無効化 */
+
+          }
+    }
+}
+
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
