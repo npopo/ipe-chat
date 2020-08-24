@@ -10,28 +10,24 @@
 
     
   </head>
+<body>
+    <header>
+      <div class="top-icon">
+        <a href="/">
+          <img src="/assets/logo_grey.png">
+        </a>
+      </div>
 
-  <body>
-
-   <header>
-       <div>
-         <a href="/">
-           <img src="/assets/logo_grey.png" alt="ipeロゴ">
-         </a>
-       </div>
-
-       <ul>
+      <ul>
           <li><a href="#">SIGNUP</a></li>
           <li><a href="#">LOGIN</a></li>
           <li><a href="#">LOGOUT</a></li>
-       </ul>
-   </header>
+      </ul>
+    </header>
+    <% if notice %>
+      <p class="flash"><%= notice %></p>
+    <% end %>
 
-       
-      
     <%= yield %>
-
-       
-
   </body>
 </html>

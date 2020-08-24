@@ -22,8 +22,8 @@
       </div>
       <div class="message-edit">
         <ul>
-         <li><a href="#">edit</a></li>
-         <li><a href="#">delete</a></li>
+         <li><%= link_to "edit", messages_edit_path(message.id) %></li>
+         <li><%= link_to 'delete', messages_destroy_path(message.id) , method: :delete %></li>
         </ul>
       </div>
       <% else %>
@@ -35,16 +35,13 @@
     <% end %> 
   </div>
   <div class="chat-form">
-   <form>
-    <input 
-     type="text" class="text"
-    >
-    <input 
-     type="submit" 
-     value="SEND" 
-     class="submit"
-    />
+   <%= form_with model: @message, url: messages_create_path, id: "new_message", local: true do |f| %>
+   
+    <%= f.text_field :content, class: "text" %>
+    <%= f.submit "SEND" , class: "submit" %>
+    
          
-   </form>
+    
+   <% end %>
   </div>
 </div>

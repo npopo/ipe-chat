@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  root 'messages#index'
 
   get "messages/index", to: "messages#index"
-  get "", to: "messages#index" , as: "root"
-
+  post "messages/create", to: "messages#create"
+  get "messages/:id/edit", to: "messages#edit", as: "messages_edit"
+  patch "messages/:id/update", to: "messages#update", as: "messages_update"
+  delete "messages/:id/destroy", to: "messages#destroy", as: "messages_destroy"
 
 end
