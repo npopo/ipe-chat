@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   get "messages/:id/edit", to: "messages#edit", as: "messages_edit"
   patch "messages/:id/update", to: "messages#update", as: "messages_update"
   delete "messages/:id/destroy", to: "messages#destroy", as: "messages_destroy"
-
+  
+  root 'users#index'
+  get "users/index", to: "users#index"
+  post "users/create", to: "users#create"
 end

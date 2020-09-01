@@ -3,6 +3,8 @@ class MessagesController < ApplicationController
     def index
         @messages = Message.all
         @message = Message.new
+        @users = User.all
+        @user = User.new
     end
 
     def create
